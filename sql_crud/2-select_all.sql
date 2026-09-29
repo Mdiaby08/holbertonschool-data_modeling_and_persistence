@@ -1,1 +1,1 @@
-SELECT * FORM books 
+SELECT * FROM books 
