@@ -1,3 +1,3 @@
 UPDATE books
-SET stock = 5
+SET stock = 10
 WHERE published_year < 2000;
