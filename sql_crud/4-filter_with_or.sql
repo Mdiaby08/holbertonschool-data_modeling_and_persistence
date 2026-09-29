@@ -1,1 +1,1 @@
-SELECT * FROM books WHERE genre = 'Fantasy' or price < 10
+SELECT * FROM books WHERE genre = 'Fantasy' OR price < 10
