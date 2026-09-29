@@ -1,4 +1,4 @@
-SELECT title, price
+SELECT title, stock
 FROM books
-ORDER BY price DESC
+ORDER BY stock DESC
 LIMIT 5;
