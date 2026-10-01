@@ -1,8 +1,8 @@
 SELECT courses.title
 FROM courses
-JOIN enrollments ON enrollments.course_id = courses.id
+LEFT JOIN enrollments ON enrollments.course_id = courses.id
 GROUP BY courses.id, courses.title
-HAVING COUNT(*) >
+HAVING COUNT(enrollments.student_id) >
 (
     SELECT AVG(enrollment_count)
     FROM (
