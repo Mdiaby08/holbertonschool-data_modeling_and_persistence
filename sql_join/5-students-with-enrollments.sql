@@ -1,7 +1,8 @@
 SELECT students.name AS student_name
-FROM courses
-WHERE student_id IN (
+FROM students
+WHERE students.id IN (
     SELECT student_id
-    FROM enrollment
-);
+    FROM enrollments
+)
+ORDER BY student_name ASC;
 
