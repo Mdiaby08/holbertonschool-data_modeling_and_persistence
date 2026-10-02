@@ -1,5 +1,5 @@
 SELECT courses.title AS course_title,
-       instructor.name AS instructor_name
+       instructors.name AS instructors_name
 FROM courses
-JOIN instructor ON courses.instructor_id = instructor.id
+JOIN instructors ON courses.instructors_id = instructors.id
 ORDER BY courses.title ASC;
