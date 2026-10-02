@@ -1,7 +1,7 @@
 SELECT courses.title AS courses_title,
        COUNT(assignments.id) AS assignments_count
 FROM courses 
-INNER JOIN assignments on assignments.courses_id = courses.id
+INNER JOIN assignments on assignments.course_id = courses.id
 GROUP BY courses.id, courses.title
 HAVING COUNT(assignments.id) >
        (
