@@ -1,7 +1,6 @@
-SELECT courses.title AS courses_title,
-       COUNT(assignments.id) AS assignments_count
-FROM courses 
-INNER JOIN assignments on assignments.course_id = courses.id
+SELECT courses.title AS courses_title
+FROM courses
+INNER JOIN assignments ON assignments.course_id = courses.id
 GROUP BY courses.id, courses.title
 HAVING COUNT(assignments.id) >
        (
@@ -11,5 +10,5 @@ HAVING COUNT(assignments.id) >
                FROM assignments
                GROUP BY course_id
            )
-       )    
-ORDER BY courses_title ASC
+       )
+ORDER BY courses_title ASC;
